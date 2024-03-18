@@ -16,13 +16,13 @@ export const todoSlice = createSlice({
         addTodo:(state,action)=>{
             const todo={
                 id:nanoid(),
-                text:action.payload.text
+                text:action.payload
             }
 
             state.todox.push(todo);
         },
         removeTodo:(state,action)=>{
-            state.todox = state.todox.filter((todo)=> todo.id!== action.payload.id)
+            state.todox = state.todox.filter((todo)=> todo.id!== action.payload)
         },
     }
 })
